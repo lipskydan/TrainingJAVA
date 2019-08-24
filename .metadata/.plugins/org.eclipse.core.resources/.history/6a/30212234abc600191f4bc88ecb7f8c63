@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Array {
+
+	public static void main(String[] args) {
+		System.out.println("¬ведите число: ");
+		
+		Scanner in = new Scanner(System.in);
+		int[] a = new int[0];
+		a.length = in.nextInt();
+		
+		System.out.println("Array's size is" + a.length);
+	}
+
+}

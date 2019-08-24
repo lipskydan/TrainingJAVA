@@ -1,0 +1,26 @@
+package Array;
+
+import java.util.*;
+import java.math.*;
+import java.util.Random;
+
+public class Array {
+
+	public static void main(String[] args) {
+		System.out.println("¬ведите число: ");
+		
+		Scanner in = new Scanner(System.in);
+		int size = in.nextInt();
+		int[] a = new int[size];
+		
+		for (int i=1; i <= a.length; i++) {
+			a[i] = i;
+		}
+		
+		for(int el: a) {
+			if (el%2 != 0) System.out.print(" ");
+			System.out.println(el);
+		}
+	}
+
+}
