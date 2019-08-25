@@ -1,0 +1,42 @@
+package Array;
+
+import java.util.*;
+
+
+public class Array {
+
+	public static void main(String[] args) {
+//		System.out.println("¬ведите число: ");
+//		
+		Scanner in = new Scanner(System.in);
+//		int size = in.nextInt();
+//		int[] a = new int[size];
+//		
+//		for (int index=0, el=1; index < a.length; index++, el++) {
+//			a[index] = el;
+//		}
+//		
+//		for(int el: a) {
+//			if (el%2 != 0) System.out.print(" ");
+//			System.out.println(el);
+//		}
+//	
+	}
+
+}
+
+class List{
+	private int[] list = new int[0];
+	
+	public void Add (int el) {
+		list[list.length] = el;
+	}
+	
+	public void Show() {
+		for (int el: list) {
+			System.out.print(el + " ");
+		}
+	}
+	
+	
+}

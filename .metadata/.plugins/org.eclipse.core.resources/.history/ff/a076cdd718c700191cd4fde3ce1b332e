@@ -1,0 +1,15 @@
+package Array;
+
+import java.util.ArrayList;
+
+public class List {
+private ArrayList<Integer> list = new ArrayList<Integer>();
+	
+	public void Add(int el) {
+		list.add(el);
+	}
+	
+	public void Show() {
+		System.out.println("Arraylist contains: " + list.toString());  
+	}
+}

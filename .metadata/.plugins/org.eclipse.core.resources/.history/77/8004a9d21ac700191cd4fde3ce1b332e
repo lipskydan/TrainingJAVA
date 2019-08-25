@@ -1,0 +1,30 @@
+package Array;
+
+import java.util.*;
+
+public class List {
+	private ArrayList<Integer> list = new ArrayList<Integer>();
+	
+	public void Add(int el) {
+		list.add(el);
+	}
+	
+	public void Delete() {
+		list.remove(list.size()-1);
+	}
+	
+	public void Show() {
+		System.out.println("Arraylist contains: " + list.toString());  
+	}
+	
+	public void ShowSorted() {
+		System.out.print("Sorted list is " + Sort());
+	}
+	
+	private ArrayList<Integer> Sort() {
+		ArrayList<Integer> tmp = new ArrayList<Integer>();
+		tmp = list;
+		Collections.sort(tmp);
+		return tmp;
+	}
+}

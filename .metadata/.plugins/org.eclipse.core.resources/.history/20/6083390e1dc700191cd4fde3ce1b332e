@@ -1,0 +1,9 @@
+package Array;
+
+public class Menu {
+	private List a = new List();
+	
+	public void menu() {
+		System.out.println("1. Add\n 2. Delete\n 3. Sort\n 4.Show");
+	}
+}

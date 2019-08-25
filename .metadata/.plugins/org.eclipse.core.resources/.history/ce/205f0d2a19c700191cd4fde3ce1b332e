@@ -1,0 +1,23 @@
+package Array;
+
+import java.util.*;
+
+public class List {
+private ArrayList<Integer> list = new ArrayList<Integer>();
+	
+	public void Add(int el) {
+		list.add(el);
+	}
+	
+	public void Show() {
+		System.out.println("Arraylist contains: " + list.toString());  
+	}
+	
+	public ArrayList<Integer> Sort() {
+		ArrayList<Integer> tmp = new ArrayList<Integer>();
+		tmp = list;
+		
+		Collection.sort(tmp);
+		return tmp;
+	}
+}
