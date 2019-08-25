@@ -48,7 +48,7 @@ public class List {
 	
 	public void SaveToFile() {
 		 try{
-	           FileWriter fw=new FileWriter("test2.txt");    
+	           FileWriter fw=new FileWriter("test1.txt");    
 	           fw.write(list.toString());    
 	           fw.close();    
 	          }catch(Exception e){System.out.println(e);}    

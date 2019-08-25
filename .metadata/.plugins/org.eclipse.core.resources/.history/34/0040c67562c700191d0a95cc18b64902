@@ -25,7 +25,7 @@ public class Menu {
 	
 	public void menuList() {
 		boolean cont = true;
-		System.out.println("1. Generate List\n2. Add\n3. Delete\n4. Sort\n5.Show\n6.Save to file\n7.Exit");
+		System.out.println("1. Generate List\n2. Add\n3. Delete\n4. Sort\n5.Show\n6.Exit");
 		Scanner in = new Scanner(System.in);
 		
 		while(cont) {
@@ -68,14 +68,9 @@ public class Menu {
 				cont = Continue();
 				break;
 			case(6):
-
-				list.SaveToFile();
-				cont = true; 
-				break;
-			case(7):
 				System.out.println("Exit");
 			
-				cont = false; 
+				cont = true; 
 				break;
 			}
 		}

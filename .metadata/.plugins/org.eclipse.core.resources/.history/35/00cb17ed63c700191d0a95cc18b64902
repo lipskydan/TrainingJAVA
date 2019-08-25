@@ -68,14 +68,13 @@ public class Menu {
 				cont = Continue();
 				break;
 			case(6):
-
-				list.SaveToFile();
+				
 				cont = true; 
 				break;
 			case(7):
 				System.out.println("Exit");
 			
-				cont = false; 
+				cont = true; 
 				break;
 			}
 		}

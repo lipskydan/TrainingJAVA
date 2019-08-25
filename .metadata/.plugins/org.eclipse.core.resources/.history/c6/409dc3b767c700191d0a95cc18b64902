@@ -48,7 +48,10 @@ public class List {
 	
 	public void SaveToFile() {
 		 try{
-	           FileWriter fw=new FileWriter("test2.txt");    
+			 Date date = formatter.parse("22-09-2018 08:23:43 PM");
+			 String formattedDate = formatter.format(date);
+			    
+	           FileWriter fw=new FileWriter();    
 	           fw.write(list.toString());    
 	           fw.close();    
 	          }catch(Exception e){System.out.println(e);}    

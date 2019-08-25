@@ -68,8 +68,12 @@ public class Menu {
 				cont = Continue();
 				break;
 			case(6):
-
-				list.SaveToFile();
+				System.out.print("Make name automatically?(Y/N)");
+				String answer = in.toString();
+				Boolean tmp;
+				if (answer.equals("Y")) tmp = true;
+				else tmp = false;
+				list.SaveToFile(tmp);
 				cont = true; 
 				break;
 			case(7):

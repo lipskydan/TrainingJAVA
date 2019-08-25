@@ -5,7 +5,6 @@ import java.util.*;
 
 
 
-
 public class List {
 	private ArrayList<Integer> list = new ArrayList<Integer>();
 	private int indexOfFile = 1;
@@ -48,7 +47,9 @@ public class List {
 	
 	public void SaveToFile() {
 		 try{
-	           FileWriter fw=new FileWriter("test2.txt");    
+			   String tmp = "test" + indexOfFile + ".txt";
+			   indexOfFile++;
+	           FileWriter fw=new FileWriter(tmp);    
 	           fw.write(list.toString());    
 	           fw.close();    
 	          }catch(Exception e){System.out.println(e);}    

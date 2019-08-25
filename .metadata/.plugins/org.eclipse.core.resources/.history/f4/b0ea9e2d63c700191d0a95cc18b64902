@@ -1,14 +1,10 @@
 package Array;
 
-import java.io.FileWriter;
 import java.util.*;
-
-
 
 
 public class List {
 	private ArrayList<Integer> list = new ArrayList<Integer>();
-	private int indexOfFile = 1;
 	
 ///////////////////////////// PRIVATE ///////////////////////////// 	
 
@@ -47,12 +43,7 @@ public class List {
 	}
 	
 	public void SaveToFile() {
-		 try{
-	           FileWriter fw=new FileWriter("test2.txt");    
-	           fw.write(list.toString());    
-	           fw.close();    
-	          }catch(Exception e){System.out.println(e);}    
-	          System.out.println("Success...");    
-	     }    
+		BufferedWriter writer = new BufferedWriter(new FileWriter("test1.txt"));
+	    writer.write(list.toString());
 	}
-
+}	

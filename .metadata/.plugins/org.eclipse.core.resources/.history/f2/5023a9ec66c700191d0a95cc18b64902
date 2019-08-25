@@ -5,7 +5,6 @@ import java.util.*;
 
 
 
-
 public class List {
 	private ArrayList<Integer> list = new ArrayList<Integer>();
 	private int indexOfFile = 1;
@@ -46,9 +45,20 @@ public class List {
 		System.out.println("Sorted list is " + Sort());
 	}
 	
-	public void SaveToFile() {
+	public void SaveToFile(boolean bool) {
 		 try{
-	           FileWriter fw=new FileWriter("test2.txt");    
+			 String tmp = "";
+			   if (bool) {
+				   tmp = "test" + indexOfFile + ".txt";
+				   indexOfFile++;   
+			   }else {
+				   System.out.print("Write a name of file: ");
+				   Scanner in = new Scanner(System.in);
+				   tmp = in.toString() + ".txt";
+			   }
+			   
+			  
+	           FileWriter fw=new FileWriter(tmp);    
 	           fw.write(list.toString());    
 	           fw.close();    
 	          }catch(Exception e){System.out.println(e);}    
