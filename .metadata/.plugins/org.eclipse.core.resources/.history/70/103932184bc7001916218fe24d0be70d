@@ -1,0 +1,41 @@
+package Array;
+import java.util.*;
+
+public class Menu {
+	private List list = new List();
+	
+	public void menu() {
+		boolean finish = false;
+		System.out.println("1. Add\n2. Delete\n3. Sort\n4.Show\n5.Exit");
+		Scanner in = new Scanner(System.in);
+		
+		while(!finish) {
+			System.out.print("Input number: ");
+			int number = in.nextInt();
+			
+			switch(number) {
+			case(1):
+				System.out.println("Input el: ");
+				int el = in.nextInt(); 
+				list.add(el);
+				break;
+			case(2):
+				System.out.println("element" + List[list.size()-1] + "was deleted");
+				list.Deleted();
+				break;
+			case(3):
+				list.ShowSorted();
+				break;
+			case(4):
+				list.Show();
+				break;
+			case(5):
+				System.out.println("Exit");
+				finish = true; 
+				break;
+			}
+		}
+		
+		System.out.println("Program was finished");
+	}
+}

@@ -4,28 +4,20 @@ import java.util.*;
 public class Menu {
 	private List list = new List();
 	
-///////////////////////////// PRIVATE /////////////////////////////
-	
-	private Boolean Continue() {
+	public Boolean Continue() {
 		String str;
 		System.out.println("Continue? YES/NO (Y/N)");
 		Scanner in = new Scanner(System.in);
 		str = in.nextLine();
-		
-		if (str.equals("n") || str.equals("N") || str.equals("NO") || str.equals("no") || str.equals("No") ) return false;
-		else if (str.equals("y") || str.equals("Y") || str.equals("YES") || str.equals("yes") || str.equals("Yes") ) return true;
-		else {
-			System.out.println("Error!!! Program will continue...");
-			return true;
-		}
+		if (str == "N" || str == "NO" || str == "no" || str == "No" ) { return false;}
+		else if (str == "Y" || str == "YES" || str == "yes" || str == "Yes") { return true;}
+		else return true;
 		
 }
 	
-///////////////////////////// PUBLIC /////////////////////////////	
-	
-	public void menuList() {
+	public void menu() {
 		boolean cont = true;
-		System.out.println("1. Generate List\n2. Add\n3. Delete\n4. Sort\n5.Show\n6.Exit");
+		System.out.println("1. Add\n2. Delete\n3. Sort\n4.Show\n5.Exit");
 		Scanner in = new Scanner(System.in);
 		
 		while(cont) {
@@ -34,20 +26,13 @@ public class Menu {
 			
 			switch(number) {
 			case(1):
-				System.out.print("What is the quantity of elements?: ");
-				int size = in.nextInt();
-				list.GenerateList(size);
-				
-				cont = Continue();
-				break;
-			case(2):
-				System.out.print("Input el: ");
+				System.out.println("Input el: ");
 				int el = in.nextInt(); 
 				list.Add(el);
 				
 				cont = Continue();
 				break;
-			case(3):
+			case(2):
 				if (list.getSize() == 0) {
 					System.out.println("list is empty");
 				}else {
@@ -57,19 +42,17 @@ public class Menu {
 			
 				cont = Continue();
 				break;
-			case(4):
+			case(3):
 				list.ShowSorted();
 			
 			    cont = Continue();
 				break;
-			case(5):
+			case(4):
 				list.Show();
-			
 				cont = Continue();
 				break;
-			case(6):
+			case(5):
 				System.out.println("Exit");
-			
 				cont = true; 
 				break;
 			}

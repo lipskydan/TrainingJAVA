@@ -1,0 +1,65 @@
+package Array;
+import java.util.*;
+
+public class Menu {
+	private List list = new List();
+	
+	public Boolean Continue() {
+		Boolean tmp = false;
+		String str;
+		
+		while (!tmp) {
+			System.out.println("Continue? YES/NO (Y/N)");
+			Scanner in = new Scanner(System.in);
+			str = in.nextLine();
+			if (str == "N" || str == "NO" || str == "no" || str == "No" ) return false;
+			else if (str == "Y" || str == "YES" || str == "yes" || str == "Yes") return true;
+			else {
+				System.out.println("Error command");
+			}
+		}
+		return true;
+		
+	}
+	
+	public void menu() {
+		boolean finish = false;
+		System.out.println("1. Add\n2. Delete\n3. Sort\n4.Show\n5.Exit");
+		Scanner in = new Scanner(System.in);
+		
+		while(!finish) {
+			System.out.print("Input number: ");
+			int number = in.nextInt();
+			
+			switch(number) {
+			case(1):
+				System.out.println("Input el: ");
+				int el = in.nextInt(); 
+				list.Add(el);
+				
+				finish = Continue();
+				break;
+			case(2):
+				if (list.getSize() == 0) {
+					System.out.println("list is empty");
+				}else {
+					System.out.println("element" +  "was deleted");
+					list.Delete();
+				}
+				break;
+			case(3):
+				list.ShowSorted();
+				break;
+			case(4):
+				list.Show();
+				break;
+			case(5):
+				System.out.println("Exit");
+				finish = true; 
+				break;
+			}
+		}
+		
+		System.out.println("Program was finished");
+	}
+}

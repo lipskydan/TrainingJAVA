@@ -12,7 +12,7 @@ public class Array {
 		Scanner in = new Scanner(System.in);
 		
 		Menu m = new Menu();
-		m.menuList();
+		m.menu();
 		
 //		List list = new List();
 //	

@@ -2,7 +2,6 @@ package Array;
 
 import java.util.*;
 
-
 public class List {
 	private ArrayList<Integer> list = new ArrayList<Integer>();
 	
@@ -16,17 +15,10 @@ public class List {
 
 ///////////////////////////// PUBLIC /////////////////////////////	
 	
-	public int getSize() { return list.size(); }
+	public int getSize() { return list.size() }
 	
 	public void Add(int el) {
 		list.add(el);
-	}
-	
-	public void GenerateList(int size) {
-		for (int i=0; i < size; i++) {
-			Random r = new Random();
-			list.add(r.nextInt());
-		}
 	}
 	
 	public void Delete() {
